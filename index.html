@@ -10,40 +10,158 @@
         <title>Math Game</title>
     </head>
 
-    <body class="container-fluid">
-        <h1>Math Game</h1>
-        <div class="configurando">
-            <div id="config">
+    <body class="pb-3">
+        <div class="container-fluid">
+            <h1 class="mb-4">Math Game</h1>
+            <div class="configurando">
+                <div id="config">
 
-                <div class="form-group row">
-                    <label for="nome" class="col-sm-2 col-form-label">Nome</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nome">
-                    </div>
-                </div>
-
-                <fieldset class="form-group">
                     <div class="row">
-                        <legend class="col-form-label col-sm-2 pt-0">Tempo</legend>
-                        <div class="col-sm-10">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="tempo" id="tempo30" value="30">
-                                <label class="form-check-label" for="gridRadios1">30 s</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="tempo" id="tempo60" value="60"
-                                    checked>
-                                <label class="form-check-label" for="gridRadios2">60 s</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="tempo" id="tempo120" value="120">
-                                <label class="form-check-label" for="gridRadios3">120 s</label>
+                        <div class="col">
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="card-title mb-4">Dados gerais</h3>
+
+                                    <div class="form-group row">
+                                        <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="nome">
+                                        </div>
+                                    </div>
+
+                                    <fieldset class="form-group">
+                                        <div class="row">
+                                            <legend class="col-form-label col-sm-2 pt-0">Tempo</legend>
+                                            <div class="col-sm-10">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="tempo"
+                                                        id="tempo30" value="30">
+                                                    <label class="form-check-label" for="gridRadios1">30 s</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="tempo"
+                                                        id="tempo60" value="60" checked>
+                                                    <label class="form-check-label" for="gridRadios2">60 s</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="tempo"
+                                                        id="tempo120" value="120">
+                                                    <label class="form-check-label" for="gridRadios3">120 s</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
                             </div>
                         </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title mb-4">Tipo de jogo</h3>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="card-title mb-3">
+                                                        <div class="form-group form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                id="multiplicacao">
+                                                            <label class="form-check-label"
+                                                                for="multiplicacao">Multiplicação</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m2">
+                                                        <label class="form-check-label" for="m2">2</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m3">
+                                                        <label class="form-check-label" for="m3">3</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m4">
+                                                        <label class="form-check-label" for="m4">4</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m5">
+                                                        <label class="form-check-label" for="m5">5</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m6">
+                                                        <label class="form-check-label" for="m6">6</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m7">
+                                                        <label class="form-check-label" for="m7">7</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m8">
+                                                        <label class="form-check-label" for="m8">8</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m9">
+                                                        <label class="form-check-label" for="m9">9</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="card-title mb-3">
+                                                        <div class="form-group form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                id="divisao">
+                                                            <label class="form-check-label"
+                                                                for="divisao">Divisão</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d2">
+                                                        <label class="form-check-label" for="d2">2</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d3">
+                                                        <label class="form-check-label" for="d3">3</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d4">
+                                                        <label class="form-check-label" for="d4">4</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d5">
+                                                        <label class="form-check-label" for="d5">5</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d6">
+                                                        <label class="form-check-label" for="d6">6</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d7">
+                                                        <label class="form-check-label" for="d7">7</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d8">
+                                                        <label class="form-check-label" for="d8">8</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d9">
+                                                        <label class="form-check-label" for="d9">9</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="game">
+
+                        </div>
                     </div>
-                </fieldset>
-            </div>
-            <div id="game">
+                </div>
 
             </div>
         </div>
