@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
         <title>Math Game</title>
     </head>
-    <body>
+
+    <body class="container-fluid">
         <h1>Math Game</h1>
-        
+        <div class="configurando">
+            <div id="config">
+
+                <div class="form-group row">
+                    <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="nome">
+                    </div>
+                </div>
+
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">Tempo</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tempo" id="tempo30" value="30">
+                                <label class="form-check-label" for="gridRadios1">30 s</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tempo" id="tempo60" value="60"
+                                    checked>
+                                <label class="form-check-label" for="gridRadios2">60 s</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="tempo" id="tempo120" value="120">
+                                <label class="form-check-label" for="gridRadios3">120 s</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div id="game">
+
+            </div>
+        </div>
         <script src="script.js"></script>
     </body>
+
 </html>
