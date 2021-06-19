@@ -1,186 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <title>Math Game</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Math Game</title>
+</head>
 
-    <body class="py-3">
-        <div class="container-fluid">
-            <div class="d-flex justify-content-between mb-4">
-                <h1>Math Game</h1>
-                <button class="btn btn-success">Iniciar Jogo</button>
-            </div>
-            <div class="configurando">
-                <div id="config">
+<body class="py-3">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between mb-4">
+            <h1>Math Game</h1>
+            <button onclick="iniciarJogo()" class="btn btn-success" id="novoJogo">Iniciar Jogo</button>
+        </div>
+        <div class="configurando">
+            <div id="config">
 
-                    <div class="row">
-                        <div class="col-lg">
+                <div class="row">
+                    <div class="col-lg">
 
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <h3 class="card-title mb-4">Dados gerais</h3>
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h3 class="card-title mb-4">Dados gerais</h3>
 
-                                    <div class="form-group row">
-                                        <label for="nome" class="col-sm-2 col-form-label">Nome</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="nome">
-                                        </div>
+                                <div class="form-group row">
+                                    <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="nome" placeholder="Insira o nome"
+                                            required>
                                     </div>
-
-                                    <fieldset class="form-group">
-                                        <div class="row">
-                                            <legend class="col-form-label col-sm-2 pt-0">Tempo</legend>
-                                            <div class="col-sm-10">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="tempo"
-                                                        id="tempo30" value="30">
-                                                    <label class="form-check-label" for="gridRadios1">30 s</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="tempo"
-                                                        id="tempo60" value="60" checked>
-                                                    <label class="form-check-label" for="gridRadios2">60 s</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="tempo"
-                                                        id="tempo120" value="120">
-                                                    <label class="form-check-label" for="gridRadios3">120 s</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </fieldset>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title mb-4">Tipo de jogo</h3>
 
+                                <fieldset class="form-group">
                                     <div class="row">
-                                        <div class="col-sm">
-                                            <div class="card mb-3 mb-sm-0">
-                                                <div class="card-body">
-                                                    <div class="card-title mb-3">
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input"
-                                                                id="multiplicacao">
-                                                            <label class="form-check-label"
-                                                                for="multiplicacao">Multiplicação</label>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="numeros">
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="m2">
-                                                            <label class="form-check-label" for="m2">2</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="m3">
-                                                            <label class="form-check-label" for="m3">3</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="m4">
-                                                            <label class="form-check-label" for="m4">4</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="m5">
-                                                            <label class="form-check-label" for="m5">5</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="m6">
-                                                            <label class="form-check-label" for="m6">6</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="m7">
-                                                            <label class="form-check-label" for="m7">7</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="m8">
-                                                            <label class="form-check-label" for="m8">8</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="m9">
-                                                            <label class="form-check-label" for="m9">9</label>
-                                                        </div>
+                                        <legend class="col-form-label col-sm-2 pt-0">Tempo</legend>
+                                        <div class="col-sm-10">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tempo" id="tempo30"
+                                                    value="30">
+                                                <label class="form-check-label" for="gridRadios1">30 s</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tempo" id="tempo60"
+                                                    value="60">
+                                                <label class="form-check-label" for="gridRadios2">60 s</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="tempo" id="tempo120"
+                                                    value="120">
+                                                <label class="form-check-label" for="gridRadios3">120 s</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title mb-4">Tipo de jogo</h3>
 
-                                                        <button type="button" class="btn btn-primary" onclick="configMarcar(this, true)">Todos</button>
-                                                        <button type="button" class="btn btn-primary" onclick="configMarcar(this, false)">Limpar</button>
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="card mb-3 mb-sm-0">
+                                            <div class="card-body">
+                                                <div class="card-title mb-3">
+                                                    <div class="form-group form-check">
+                                                        <input type="radio" name="operacao" class="form-check-input"
+                                                            id="multiplicacao">
+                                                        <label class="form-check-label"
+                                                            for="multiplicacao">Multiplicação</label>
                                                     </div>
+                                                </div>
+                                                <hr>
+                                                <div class="numeros">
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m2">
+                                                        <label class="form-check-label" for="m2">2</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m3">
+                                                        <label class="form-check-label" for="m3">3</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m4">
+                                                        <label class="form-check-label" for="m4">4</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m5">
+                                                        <label class="form-check-label" for="m5">5</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m6">
+                                                        <label class="form-check-label" for="m6">6</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m7">
+                                                        <label class="form-check-label" for="m7">7</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m8">
+                                                        <label class="form-check-label" for="m8">8</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="m9">
+                                                        <label class="form-check-label" for="m9">9</label>
+                                                    </div>
+
+                                                    <button type="button" class="btn btn-primary"
+                                                        onclick="configMarcar(this, true)">Todos</button>
+                                                    <button type="button" class="btn btn-primary"
+                                                        onclick="configMarcar(this, false)">Limpar</button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <div class="card-title mb-3">
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input"
-                                                                id="divisao">
-                                                            <label class="form-check-label"
-                                                                for="divisao">Divisão</label>
-                                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="card-title mb-3">
+                                                    <div class="form-group form-check">
+                                                        <input type="radio" name="operacao" class="form-check-input"
+                                                            id="divisao">
+                                                        <label class="form-check-label" for="divisao">Divisão</label>
                                                     </div>
-                                                    <hr>
-                                                    <div class="numeros">
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="d2">
-                                                            <label class="form-check-label" for="d2">2</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="d3">
-                                                            <label class="form-check-label" for="d3">3</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="d4">
-                                                            <label class="form-check-label" for="d4">4</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="d5">
-                                                            <label class="form-check-label" for="d5">5</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="d6">
-                                                            <label class="form-check-label" for="d6">6</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="d7">
-                                                            <label class="form-check-label" for="d7">7</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="d8">
-                                                            <label class="form-check-label" for="d8">8</label>
-                                                        </div>
-                                                        <div class="form-group form-check">
-                                                            <input type="checkbox" class="form-check-input" id="d9">
-                                                            <label class="form-check-label" for="d9">9</label>
-                                                        </div>
+                                                </div>
+                                                <hr>
+                                                <div class="numeros">
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d2">
+                                                        <label class="form-check-label" for="d2">2</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d3">
+                                                        <label class="form-check-label" for="d3">3</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d4">
+                                                        <label class="form-check-label" for="d4">4</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d5">
+                                                        <label class="form-check-label" for="d5">5</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d6">
+                                                        <label class="form-check-label" for="d6">6</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d7">
+                                                        <label class="form-check-label" for="d7">7</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d8">
+                                                        <label class="form-check-label" for="d8">8</label>
+                                                    </div>
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" class="form-check-input" id="d9">
+                                                        <label class="form-check-label" for="d9">9</label>
+                                                    </div>
 
-                                                        <button type="button" class="btn btn-primary" onclick="configMarcar(this, true)">Todos</button>
-                                                        <button type="button" class="btn btn-primary" onclick="configMarcar(this, false)">Limpar</button>
-                                                    </div>
+                                                    <button type="button" class="btn btn-primary"
+                                                        onclick="configMarcar(this, true)">Todos</button>
+                                                    <button type="button" class="btn btn-primary"
+                                                        onclick="configMarcar(this, false)">Limpar</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="game">
-
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="game">
 
             </div>
         </div>
-        <script src="script.js"></script>
-    </body>
+    </div>
+    <script src="script.js"></script>
+</body>
 
 </html>
